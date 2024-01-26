@@ -10,7 +10,9 @@ Some python scripts to act as api provider using FastAPI for operating CRUD func
   - Uvicorn 0.27.0
 
 ## Instructions to Run
-1. Run the python virtual environment from ``venv`` folder:
+1. Clone the repository.
+   
+2. Run the python virtual environment from ``venv`` folder:
    ```
    # For linux and mac
    $ source venv/bin/activate
@@ -19,10 +21,10 @@ Some python scripts to act as api provider using FastAPI for operating CRUD func
    > venv/bin/activate
 
    ```
-2. Run the mongoDB database.
+3. Run the mongoDB database.
     - The API will connect to ``mongodb://localhost:27017``.
     -  If the database isn't running on localhost or different port number, adjust accordingly in ``db.py`` under ``config`` folder.
-3. Run ``uvicorn`` using the following command:
+4. Run ``uvicorn`` using the following command:
    ```
    uvicorn server:app --reload
    ``` 
@@ -30,7 +32,7 @@ Some python scripts to act as api provider using FastAPI for operating CRUD func
       ```
       pip install -r requirements.txt
       ```
-4. The API will be running. You may interact it with Swagger UI in any browser through ``http://localhost:8000/docs#`` or other API application such as Postman.
+5. The API will be running. You may interact it with Swagger UI in any browser through ``http://localhost:8000/docs#`` or other API application such as Postman.
     - The ``uvicorn`` will be running on port ``8000``. If it's in another port number, adjust the address accordingly.
 
 ## MongoDB Schema
