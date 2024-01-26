@@ -133,7 +133,7 @@ View one of the employee data entries under ``Employee`` collection.
 - **URL**: .../{id}
 - **Payload**:
   - Parameter: 
-    - ObjectID - String
+    - ObjectID of the employee (String)
 - **Expected Result**:
   
   Return HTTP code 200 and following body: 
@@ -161,7 +161,7 @@ Update one of the employee data entries under ``Employee`` collection. This acti
 - **URL**: .../{id}
 - **Payload**:
   - Parameter: 
-    - ObjectID - String
+    - ObjectID of the employee (String)
   - Request body in ``JSON`` format: 
       ```
       {
@@ -202,7 +202,7 @@ Delete one of the employee data entries under ``Employee`` collection. This acti
 - **URL**: .../{id}
 - **Payload**:
   - Parameter: 
-    - ObjectID - String
+    - ObjectID of the employee (String)
 - **Expected Result**:
   
   Return HTTP code 200 and following body: 
@@ -245,7 +245,7 @@ View one of the database logs under ``DBLogs`` collection.
 - **URL**: .../log/{id}
 - **Payload**: 
   - Parameter: 
-    - ObjectID - String
+    - ObjectID of the log (String)
 - **Expected Result**:
   
   Return HTTP code 200 and following body: 
