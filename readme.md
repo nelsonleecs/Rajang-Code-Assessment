@@ -99,7 +99,7 @@ For creating a new employee entry under ``Employee`` collection. This action wil
 
 ### 2. Read All Employee
 
-To view all employee data entries under ``Employee`` collection.
+View all employee data entries under ``Employee`` collection.
 - **HTTP Method**: GET 
 - **URL**: .../
 - **Payload**: None
@@ -128,7 +128,7 @@ To view all employee data entries under ``Employee`` collection.
 
 ### 3. Read One Employee
 
-To view one of the employee data entries under ``Employee`` collection.
+View one of the employee data entries under ``Employee`` collection.
 - **HTTP Method**: GET 
 - **URL**: .../{id}
 - **Payload**:
@@ -156,7 +156,7 @@ To view one of the employee data entries under ``Employee`` collection.
 
 ### 4. Update Employee
 
-To update one of the employee data entries under ``Employee`` collection. This action will be logged.
+Update one of the employee data entries under ``Employee`` collection. This action will be logged.
 - **HTTP Method**: PUT 
 - **URL**: .../{id}
 - **Payload**:
@@ -195,43 +195,70 @@ To update one of the employee data entries under ``Employee`` collection. This a
   }
   ```
 
-### 4. Update Employee
+### 5. Delete Employee
 
-To update one of the employee data entries under ``Employee`` collection. This action will be logged.
-- **HTTP Method**: PUT 
+Delete one of the employee data entries under ``Employee`` collection. This action will be logged.
+- **HTTP Method**: DELETE 
 - **URL**: .../{id}
 - **Payload**:
   - Parameter: 
     - ObjectID - String
-  - Request body in ``JSON`` format: 
-      ```
-      {
-      "fullName": "string",
-      "dateOfBirth": "2024-01-26",
-      "dateJoined": "2024-01-26",
-      "dateLeft": "2024-01-26",
-      "nric": "397779111567",
-      "department": "admin",
-      "salary": 0,
-      "remark": "string"
-      }
-      ```
+- **Expected Result**:
+  
+  Return HTTP code 200 and following body: 
+  ```
+  {
+    "status": "OK",
+    "deletedID": ObjectID
+  }
+  ```
+
+### 6. Read All Log
+
+View all the database logs under ``DBLogs`` collection.
+- **HTTP Method**: GET 
+- **URL**: .../log/
+- **Payload**: None
 - **Expected Result**:
   
   Return HTTP code 200 and following body: 
   ```
   {
   "status": "OK",
-  "data": {
-    "_id": ObjectID,
-    "fullName": "string",
-    "dateOfBirth": "2024-01-26",
-    "dateJoined": "2024-01-26",
-    "dateLeft": "2024-01-26",
-    "nric": "397779111567",
-    "department": "admin",
-    "salary": 0,
-    "remark": "string"
+  "data": [
+      {
+        "_id": ObjectID,
+        "operation": "string",
+        "timestamp": DateTime,
+        "ipAddress": "string",
+        "document": "string"
+      },
+      ...
+    ]
+  }
+  ```
+
+### 7. Read One Log
+
+View one of the database logs under ``DBLogs`` collection.
+- **HTTP Method**: GET 
+- **URL**: .../log/{id}
+- **Payload**: 
+  - Parameter: 
+    - ObjectID - String
+- **Expected Result**:
+  
+  Return HTTP code 200 and following body: 
+  ```
+  {
+  "status": "OK",
+  "data": 
+    {
+      "_id": ObjectID,
+      "operation": "string",
+      "timestamp": DateTime,
+      "ipAddress": "string",
+      "document": "string"
     }
   }
   ```
