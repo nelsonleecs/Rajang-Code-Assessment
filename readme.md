@@ -11,7 +11,6 @@ Some python scripts to act as api provider using FastAPI for operating CRUD func
 
 ## Instructions to Run
 1. Clone the repository.
-   
 2. Run the python virtual environment from ``venv`` folder:
    ```
    # For linux and mac
